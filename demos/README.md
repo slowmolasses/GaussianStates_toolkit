@@ -398,7 +398,3 @@ PlotWignerComparison[V_out, mu_out, rho_exact_fock];
 - Boyd, *Nonlinear Optics*, 3rd ed. (Academic Press, 2008) — canonical reference for χ⁽²⁾ processes.
 
 ---
-
-## License
-
-MIT License. Free for academic and commercial use with attribution.
