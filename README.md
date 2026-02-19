@@ -25,7 +25,7 @@ Compatible with **Xanadu's StrawberryFields** conventions: uses the (x̂, p̂) p
 
 ### Demonstrations (`demo/` subdirectory)
 
-See [`demo/README.md`](demo/README.md) for detailed documentation of:
+See [`demos/README.md`](demos/README.md) for detailed documentation of:
 - **BeamDisplacement_Debug.nb** — Optimizes transmitter spatial mode for quantum-enhanced target detection (Quantum Chernoff Exponent analysis)  
 - **chernoff-exponent.nb** — Computes QCE for multimode Gaussian state discrimination (implements Pirandola et al.'s formula)  
 - **SFG_evolution_organized.nb** — Nonlinear sum-frequency generation circuit simulation (appendix C of [Phys. Rev. Applied 19, 064015](https://doi.org/10.1103/PhysRevApplied.19.064015))
