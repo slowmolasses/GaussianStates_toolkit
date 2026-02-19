@@ -8,13 +8,13 @@ Example applications of the Gaussian state manipulation tools from the parent di
 
 | Notebook | Application Domain | Key Result |
 |----------|-------------------|------------|
-| `BeamDisplacement_Debug.nb` | Quantum target detection | Optimizes spatial mode for quantum-enhanced sensing |
+| `BeamDisplacement.nb` | Quantum target detection | Optimizes spatial mode for quantum-enhanced sensing |
 | `chernoff-exponent.nb` | Quantum hypothesis testing | Computes QCE for multimode Gaussian state discrimination |
 | `SFG_evolution_organized.nb` | Nonlinear quantum optics | Three-wave mixing in χ⁽²⁾ media (SFG gate simulation) |
 
 ---
 
-## BeamDisplacement_Debug.nb
+## BeamDisplacement.nb
 
 ### Problem Statement
 
@@ -57,7 +57,7 @@ Example applications of the Gaussian state manipulation tools from the parent di
 
 ### Example Result
 
-![Optimal quantum probe Wigner function](1771455803675_image.png)
+![Optimal quantum probe Wigner function](initial_beam-displacementresults.png)
 
 **Top row:** Magnitude |Ψ_Q|², real part Re(Ψ_Q), imaginary part Im(Ψ_Q) of the optimal quantum probe mode in position space  
 **Bottom plot:** Fock expansion coefficients c_k showing the mode is predominantly Gaussian (exponential decay)
@@ -70,15 +70,12 @@ Example applications of the Gaussian state manipulation tools from the parent di
 **Interpretation:**  
 At Df = 45 and N_tot = 16, the optimal strategy is to use *pure squeezing* with no signal displacement. The quantum advantage comes entirely from quantum correlations between signal and idler, not from classical signal power. This regime demonstrates **quantum illumination** — entanglement-enhanced target detection superior to classical coherent-state radar.
 
-**Dotted circle in Wigner plots:** Classical uncertainty limit (ℏ/2 variance). The squeezed mode compresses noise below this limit in one quadrature (enabling sub-shot-noise detection), at the cost of increased noise in the conjugate quadrature.
-
 ---
 
 ### Dependencies
 
 **From parent directory:**
 - `GaussianStates_clean.nb` — spatial mode decomposition (`SMSgen`, `DisplacementOp`)  
-- `chernoff-exponent.nb` — QCE computation
 
 **Built-in Mathematica:**
 - `NMaximize` — nonlinear optimization over (r, mode coefficients)  
@@ -250,7 +247,7 @@ Print["QCE = ", xi];  (* ≈ 0.88 *)
 
 ### Circuit Diagrams
 
-![Single SFG gate](1771455800477_image.png)
+![Single SFG gate](oneSFGdiagram.png)
 
 **Single SFG configuration:** Signal and idler mix with a strong coherent pump (|N_p⟩ photon number state) inside a nonlinear crystal (blue box). Output: photon-subtracted state at pump port, modified signal/idler correlation.
 
