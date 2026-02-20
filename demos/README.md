@@ -59,7 +59,7 @@ Example applications of the Gaussian state manipulation tools from the parent di
 ![Optimal quantum probe Wigner function](initial_beam-displacementresults.png)
 
 **Top row:** Magnitude |Ψ_Q|², real part Re(Ψ_Q), imaginary part Im(Ψ_Q) of the optimal spatial mode Ψ_Q excited at the receiver.  
-**Bottom plot:** Coefficients c_k in the HG-mode basis expansion $Ψ_Q=\sum_kc_ke^{i\theta_k}HG_{k0}$ (with complex phases $\theta_k$ optimized analytically) showing the mode is an off-center Gaussian.
+**Bottom plot:** Coefficients c_k>0 in the HG-mode basis expansion $Ψ_Q=\sum_kc_ke^{i\theta_k}HG_{k0}$ (with complex phases $\theta_k$ optimized analytically) showing the mode is an off-center Gaussian.
 
 **Parameters:**
 - **Displacement mean-photon allocation:** N₁ = 1.77×10⁻¹⁵ (essentially zero displacement)  
