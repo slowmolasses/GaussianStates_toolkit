@@ -23,10 +23,9 @@ Example applications of the Gaussian state manipulation tools from the parent di
 - **Channel:** Free-space propagation with Fresnel diffraction, optional target reflection  
 - **Receiver:** Joint quantum measurement on signal + idler (mode-matched homodyne or photon counting)
 
-**Goal:** Maximize the **Quantum Chernoff Exponent (QCE)** for discriminating H₀ (no target) vs. H₁ (target present), subject to constraints on mean photon number and beam geometry.
+**Goal:** Maximize the **Quantum Chernoff Exponent (QCE)** for discriminating H₀ (no beam displacement) vs. H₁ (small transversal displacement), subject to constraints on mean photon number and beam geometry.
 
-**Classical benchmark:** Fisher information bound from intensity measurements  
-**Quantum advantage:** Entanglement-assisted detection via squeezed vacuum idler mode
+**Classical benchmark:** QCE bound from intensity measurements  
 
 ---
 
@@ -36,7 +35,7 @@ Example applications of the Gaussian state manipulation tools from the parent di
   - Controls diffraction spreading over propagation distance L  
   - Example: Df = 45 → moderate diffraction (signal spreads by ~factor of 2 at receiver)
 
-- **Total mean photon number:** N_tot = N_signal + N_idler  
+- **Total mean photon number constraint:** N_tot = N_1(displacement mean) + N_2(squeezing mean)
   - Constrained by transmitter power budget  
   - Example: N_tot = 16 → ~10^(-18) W optical power for λ = 1.55 μm
 
@@ -48,7 +47,7 @@ Example applications of the Gaussian state manipulation tools from the parent di
 ### Methodology
 
 1. **Decompose spatial mode** into Hermite-Gaussian basis via Gram-Schmidt (functions from `GaussianStates_clean.nb`)
-2. **Evolve covariance matrix** under free-space propagation (paraxial ABCD matrix)
+2. **Evolve covariance matrix** under free-space propagation
 3. **Apply displacement** corresponding to target reflection (small displacement limit: ε ≪ 1)
 4. **Compute QCE** using Pirandola et al.'s formula (from `chernoff-exponent.nb`)
 5. **Optimize** squeezing parameter r and mode coefficients via `NMaximize`
@@ -59,8 +58,8 @@ Example applications of the Gaussian state manipulation tools from the parent di
 
 ![Optimal quantum probe Wigner function](initial_beam-displacementresults.png)
 
-**Top row:** Magnitude |Ψ_Q|², real part Re(Ψ_Q), imaginary part Im(Ψ_Q) of the optimal quantum probe mode in position space  
-**Bottom plot:** Fock expansion coefficients c_k showing the mode is predominantly Gaussian (exponential decay)
+**Top row:** Magnitude |Ψ_Q|², real part Re(Ψ_Q), imaginary part Im(Ψ_Q) of the optimal spatial mode Ψ_Q excited at the receiver.  
+**Bottom plot:** Coefficients c_k in the HG-mode basis expansion $Ψ_Q=\sum_kc_ke^{i\theta_k}HG_{k0}$ (with complex phases $\theta_k$ optimized analytically) showing the mode is an off-center Gaussian.
 
 **Parameters:**
 - **Displacement mean-photon allocation:** N₁ = 1.77×10⁻¹⁵ (essentially zero displacement)  
