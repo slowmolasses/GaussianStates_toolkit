@@ -8,7 +8,7 @@ Example applications of the Gaussian state manipulation tools from the parent di
 
 | Notebook | Application Domain | Key Result |
 |----------|-------------------|------------|
-| `BeamDisplacement.nb` | Quantum target detection | Optimizes spatial mode for quantum-enhanced sensing |
+| `BeamDisplacement.nb` | Quantum target detection | Optimizes spatial mode for quantum-enhanced hypothesis testing |
 | `chernoff-exponent.nb` | Quantum hypothesis testing | Computes QCE for multimode Gaussian state discrimination |
 | `SFG_evolution_organized.nb` | Nonlinear quantum optics | Three-wave mixing in χ⁽²⁾ media (SFG gate simulation) |
 
@@ -393,7 +393,7 @@ PlotWignerComparison[V_out, mu_out, rho_exact_fock];
 - Audenaert et al., "Discriminating states: The quantum Chernoff bound," *Phys. Rev. Lett.* **98**, 160501 (2007).
 
 ### Sum-Frequency Generation
-- Cox, Hemmati, Guha, "Sum-frequency generation-based entanglement-assisted photonic joint-detection transceiver," *Phys. Rev. Applied* **19**, 064015 (2023). [DOI:10.1103/PhysRevApplied.19.064015](https://doi.org/10.1103/PhysRevApplied.19.064015)  
+- Cox, Zhuang, GAgatsos, Bash, Guha, "Transceiver Designs Approaching the Entanglement-Assisted Communication Capacity," *Phys. Rev. Applied* **19**, 064015 (2023). [DOI:10.1103/PhysRevApplied.19.064015](https://doi.org/10.1103/PhysRevApplied.19.064015)  
 - Boyd, *Nonlinear Optics*, 3rd ed. (Academic Press, 2008) — canonical reference for χ⁽²⁾ processes.
 
 ---
