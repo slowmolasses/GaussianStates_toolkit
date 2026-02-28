@@ -215,18 +215,6 @@ Beam splitter mixing modes i and j.
 - â'ᵢ = cos(θ) âᵢ − e^(iφ) sin(θ) âⱼ  
 - â'ⱼ = e^(−iφ) sin(θ) âᵢ + cos(θ) âⱼ
 
-**Example (Hong-Ou-Mandel interference):**
-```mathematica
-(* Two single photons entering a 50:50 BS *)
-(* Initial state: |1,1⟩ (Fock state representation not directly in this toolkit) *)
-S_BS = BSgen[2, 1, 2, 0.5];  (* 50:50 splitter *)
-
-(* For Gaussian approximation: replace |1⟩ with displaced vacuum *)
-V0 = IdentityMatrix[4];
-d = DisplacementOp[2, {1, 1, 0, 0}];  (* Displace both modes in x-quadrature *)
-V_HOM = S_BS . d . V0 . Transpose[d] . Transpose[S_BS];
-```
-
 ---
 
 #### `Phasegen[phivec]`
@@ -246,28 +234,6 @@ Applies phase shifts to each mode.
 **Example (phase-space rotation):**
 ```mathematica
 S_phase = Phasegen[{Pi/4, 0}];  (* Rotate mode 1 by 45° in phase space *)
-```
-
----
-
-#### `DisplacementOp[n, dvec]`
-
-Displacement operator (affine transformation on phase space).
-
-**Parameters:**
-- `n` — number of modes  
-- `dvec` — 2n-dimensional displacement vector (x-quadratures, then p-quadratures)
-
-**Returns:** Symplectic transformation + displacement vector encoding **D**(α) = exp(α â† − α* â)
-
-**Note:** Displacements **do not change** the covariance matrix (only shifts the mean). To apply a displacement:
-
-```mathematica
-(* Coherent state |α⟩ = Displacement applied to vacuum *)
-alpha = 2 + 3*I;  (* complex amplitude *)
-dvec = Re[{alpha, -I*alpha}] * Sqrt[2];  (* Convert to (x, p) *)
-V_coherent = IdentityMatrix[2];  (* Covariance unchanged from vacuum *)
-mean_coherent = dvec;  (* Mean vector shifts *)
 ```
 
 ---
